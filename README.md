@@ -1,15 +1,16 @@
 # IBM Bluemix ICE Image Update Manual
 
 ## WARNING:
-### Be careful, and make sure you know what you're doing before running this script
+### Be careful while this script is in it's earliest phases
 
 ## To use:
-update `imageName`, `namespace`, and `container`
+enter project directory, update `imageName`, `namespace`, and `container` values in image.py file. optional `ipAddress`.
 
 ### To do:
-* add ArgParse support for variables above
-* ArgParse takes in array of ports
+* ArgParse support for variables above
+* ArgParse supports array of ports
+* ArgParse defines directory
 * Verify image create && bind, and remove previous
-* Handle image bind fail
+* Handle image bind fail, and other fails
 
 aug2uag © 2015
