@@ -1,16 +1,9 @@
-# IBM Bluemix ICE Image Update Manual
-
-## WARNING:
-### Be careful while this script is in it's earliest phases
+# IBM Bluemix Container Management Instrument for Prototyping and Deployments
 
 ## To use:
-enter project directory, update `imageName`, `namespace`, and `container` values in image.py file. optional `ipAddress`.
-
-### To do:
-* ArgParse support for variables above
-* ArgParse supports array of ports
-* ArgParse defines directory
-* Verify image create && bind, and remove previous
-* Handle image bind fail, and other fails
+1. You should have a live container and images
+2. Enter configuration data, use --help or -h
+3. Make sure to be aware of relative or absolute directories for build
+4. Script deletes previous images and cartridge, adjust as necessary
 
 aug2uag © 2015
