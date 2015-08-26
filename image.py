@@ -93,31 +93,31 @@ imageAddr = namespace + '/' + image + ':'
 # 1 - stop old container
 oldContainer = container + str(flag)
 command = "ice stop " + oldContainer
-# os.system(command)
+os.system(command)
 
 # 2 - if ip, unbind
 if ip is not None:
 	command = "ice ip unbind " + ip + " " + oldContainer
-	# os.system(command)
+	os.system(command)
 
 
 #3 - delete previous images
 previousImageShort = imageAddr + str(flag)
 previousImageLong = url + previousImageShort
 command = "ice --local rmi " + previousImageShort
-# os.system(command)
+os.system(command)
 command = "ice --local rmi " + previousImageLong
-# os.system(command)
+os.system(command)
 command = "ice --cloud rmi " + previousImageShort
-# os.system(command)
+os.system(command)
 
 #4 - build, tag, push new image
 newImageShort = imageAddr + str(flag + 1)
 newImageLong = url + newImageShort
 command = "ice --local build -t " + newImageShort + " " + directory
-# os.system(command)
+os.system(command)
 command = "ice --local tag " + newImageShort + " " + newImageLong
-# os.system(command)
+os.system(command)
 command = "ice --local push " + newImageLong
 
 #5 - run new container
@@ -126,16 +126,16 @@ specifiedPorts = ''
 for port in ports:
 	specifiedPorts+='-p ' + str(port) + ' '
 command = "ice run --name " + newContainer + " " + specifiedPorts + " " + newImageShort
-# os.system(command)
+os.system(command)
 
 #6 - if ip bind port to new container
 if ip is not None:
 	command = "ice ip bind " + ip + " " + newContainer
-	# os.system(command)
+	os.system(command)
 
 #7 - delete old container
 command = "ice rm " + oldContainer
-# os.system(command)
+os.system(command)
 
 data['flag']+=1
 
