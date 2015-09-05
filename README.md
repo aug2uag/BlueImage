@@ -7,4 +7,6 @@
 4. Script deletes previous images and cartridge, adjust as necessary
 5. Requires `ice login` within dedicated Docker VM environment
 
+Licensed by GNU General Public License v2.0
+
 aug2uag © 2015
